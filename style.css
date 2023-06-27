@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    background-color: #d34;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.password-box{
+    position: relative;
+    top: 30%;
+    width: 300px;
+    height: 40px;
+
+}
+.email-input{
+    width: 100%;
+    height: 100%;
+    background: white;
+    color: #d349;
+    border: none;
+    outline: none;
+    padding: 5px 15px;
+    border-radius: 15px;
+    padding-right: 45px;
+    border-bottom: 2px solid #922037;
+}
+.email-input:focus{
+    box-shadow:0 0 0 2px #d349 ,0 0 0 4px #4e2;
+}
+.user-ic{
+    position: absolute;
+    right: 15px;
+    top: 30%;
+    transform: translate(-50%);
+    cursor: pointer;
+    color: #d34; 
+}
+.password-input{
+    width: 100%;
+    height: 100%;
+    background: white;
+    color: #d349;
+    border: none;
+    outline: none;
+    padding: 5px 15px;
+    border-radius: 15px;
+    padding-right: 45px;
+}
+input::placeholder{
+    color: #d34;
+}
+.password-input:focus{
+    box-shadow:0 0 0 2px #d349 ,0 0 0 4px #4e2;
+}
+.show-password{
+    position: absolute;
+    right: 15px;
+    top: 130%;
+    transform: translate(-50%);
+    cursor: pointer;
+    color: #d34;
+
+}
+.login{
+    position: absolute;
+    border: 2px solid white;
+    background: #922037;
+    color: #fff;
+    height: 70px;
+    width: 70px;
+    top: 10px;
+    right: -30%;
+    font-size: 20px;
+    border-radius: 10px;
+}
+.password-checklist{
+    position: absolute;
+    top: calc(200% + 10px);
+    width: 100%;
+    padding: 20px 30px;
+    background: #ef547f;
+    border-radius: 5px;
+    /* hide the element */
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(20px);
+    transition: .5s ease;
+}.password-input:focus ~ .password-checklist{
+    opacity: 1;
+    transform: translateY(0);
+}
+.checklist-title{
+    font-size: 16px;
+    color: #922037;
+    margin-bottom: 10px;
+}
+.checklist{
+    list-style: none;
+}
+.list-item{
+    padding-left: 30px;
+    color: #fff;
+    font-size: 14px;
+}
+.list-item::before{
+    content: '\f00d';
+    font-family: FontAwesome;
+    display: inline-block;
+    margin: 8px 0;
+    width: 20px;
+    font-size: 12px;
+}
+.list-item.checked{
+    opacity: 0.5
+}
+.list-item.checked::before{
+    content: '\f00c';
+    color: #4e2;
+}
